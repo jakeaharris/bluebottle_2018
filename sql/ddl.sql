@@ -1,0 +1,123 @@
+CREATE TABLE IF NOT EXISTS stage_hourly_weather
+(
+    STATION TEXT,
+    STATION_NAME TEXT,
+    ELEVATION TEXT,
+    LATITUDE TEXT,
+    LONGITUDE TEXT,
+    DATE TEXT,
+    REPORTTPYE TEXT,
+    HOURLYSKYCONDITIONS TEXT,
+    HOURLYVISIBILITY TEXT,
+    HOURLYPRSENTWEATHERTYPE TEXT,
+    HOURLYDRYBULBTEMPF TEXT,
+    HOURLYDRYBULBTEMPC TEXT,
+    HOURLYWETBULBTEMPF TEXT,
+    HOURLYWETBULBTEMPC TEXT,
+    HOURLYDewPointTempF TEXT,
+    HOURLYDewPointTempC TEXT,
+    HOURLYRelativeHumidity TEXT,
+    HOURLYWindSpeed TEXT,
+    HOURLYWindDirection TEXT,
+    HOURLYWindGustSpeed TEXT,
+    HOURLYStationPressure TEXT,
+    HOURLYPressureTendency TEXT,
+    HOURLYPressureChange TEXT,
+    HOURLYSeaLevelPressure TEXT,
+    HOURLYPrecip TEXT,
+    HOURLYAltimeterSetting TEXT,
+    DAILYMaximumDryBulbTemp TEXT,
+    DAILYMinimumDryBulbTemp TEXT,
+    DAILYAverageDryBulbTemp TEXT,
+    DAILYDeptFromNormalAverageTemp TEXT,
+    DAILYAverageRelativeHumidity TEXT,
+    DAILYAverageDewPointTemp TEXT,
+    DAILYAverageWetBulbTemp TEXT,
+    DAILYHeatingDegreeDays TEXT,
+    DAILYCoolingDegreeDays TEXT,
+    DAILYSunrise TEXT,
+    DAILYSunset TEXT,
+    DAILYWeather TEXT,
+    DAILYPrecip TEXT,
+    DAILYSnowfall TEXT,
+    DAILYSnowDepth TEXT,
+    DAILYAverageStationPressure TEXT,
+    DAILYAverageSeaLevelPressure TEXT,
+    DAILYAverageWindSpeed TEXT,
+    DAILYPeakWindSpeed TEXT,
+    PeakWindDirection TEXT,
+    DAILYSustainedWindSpeed TEXT,
+    DAILYSustainedWindDirection TEXT,
+    MonthlyMaximumTemp TEXT,
+    MonthlyMinimumTemp TEXT,
+    MonthlyMeanTemp TEXT,
+    MonthlyAverageRH TEXT,
+    MonthlyDewpointTemp TEXT,
+    MonthlyWetBulbTemp TEXT,
+    MonthlyAvgHeatingDegreeDays TEXT,
+    MonthlyAvgCoolingDegreeDays TEXT,
+    MonthlyStationPressure TEXT,
+    MonthlySeaLevelPressure TEXT,
+    MonthlyAverageWindSpeed TEXT,
+    MonthlyTotalSnowfall TEXT,
+    MonthlyDeptFromNormalMaximumTemp TEXT,
+    MonthlyDeptFromNormalMinimumTemp TEXT,
+    MonthlyDeptFromNormalAverageTemp TEXT,
+    MonthlyDeptFromNormalPrecip TEXT,
+    MonthlyTotalLiquidPrecip TEXT,
+    MonthlyGreatestPrecip TEXT,
+    MonthlyGreatestPrecipDate TEXT,
+    MonthlyGreatestSnowfall TEXT,
+    MonthlyGreatestSnowfallDate TEXT,
+    MonthlyGreatestSnowDepth TEXT,
+    MonthlyGreatestSnowDepthDate TEXT,
+    MonthlyDaysWithGT90Temp TEXT,
+    MonthlyDaysWithLT32Temp TEXT,
+    MonthlyDaysWithGT32Temp TEXT,
+    MonthlyDaysWithLT0Temp TEXT,
+    MonthlyDaysWithGT001Precip TEXT,
+    MonthlyDaysWithGT010Precip TEXT,
+    MonthlyDaysWithGT1Snow TEXT,
+    MonthlyMaxSeaLevelPressureValue TEXT,
+    MonthlyMaxSeaLevelPressureDate TEXT,
+    MonthlyMaxSeaLevelPressureTime TEXT,
+    MonthlyMinSeaLevelPressureValue TEXT,
+    MonthlyMinSeaLevelPressureDate TEXT,
+    MonthlyMinSeaLevelPressureTime TEXT,
+    MonthlyTotalHeatingDegreeDays TEXT,
+    MonthlyTotalCoolingDegreeDays TEXT,
+    MonthlyDeptFromNormalHeatingDD TEXT,
+    MonthlyDeptFromNormalCoolingDD TEXT,
+    MonthlyTotalSeasonToDateHeatingDD TEXT,
+    MonthlyTotalSeasonToDateCoolingDD TEXT,
+    filename TEXT,
+    cdate DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+;
+
+CREATE TABLE IF NOT EXISTS hourly_weather
+(
+    station_name TEXT,
+    date DATETIME,
+    hourly_dry_bulb_temp NUMERIC,
+    daily_avg_dry_bulb_temp NUMERIC
+)
+;
+
+CREATE TABLE IF NOT EXISTS stage_morse_store_data
+(
+    local_created_at TEXT,
+    item_name TEXT,
+    net_quantity TEXT,
+    filename TEXT,
+    cdate DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+;
+
+CREATE TABLE IF NOT EXISTS morse_store_data
+(
+    order_date DATETIME,
+    item_name TEXT,
+    net_quantity NUMERIC
+)
+;
